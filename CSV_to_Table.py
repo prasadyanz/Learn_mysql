@@ -1,3 +1,8 @@
+import csv
+import Database
+mycursor = Database.mycursor
+db = Database.db
+
 """ From a csv into a table """
 mycursor.execute("CREATE TABLE Current_PF(stock varchar(20) NOT NULL, buy_price float UNSIGNED NOT NULL, qty int UNSIGNED NOT NULL)")
 

@@ -1,14 +1,9 @@
-import mysql.connector
 
-db = mysql.connector.connect(
-    host= "localhost",
-    user = "Prasad",
-    passwd = "dasarp",
-    database="my_stock_data"
 
-)
-
-mycursor = db.cursor()
+# import SQL_Connect_PI as SQ
+import SQL_Connect_PC as SQ
+db = SQ.connection
+mycursor = SQ.mycursor
 #####################     Table   STOCK_DATA      ########################################################
 mycursor.execute("SELECT * FROM STOCK_DATA")
 myresult = mycursor.fetchall()
